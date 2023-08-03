@@ -1,1 +1,1 @@
-# pipelinesMEG
+# MEGpipelines
