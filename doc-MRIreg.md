@@ -16,6 +16,10 @@
 7. In the Functional data tab, right-click on <b>Subject01</b> and select <i>Review raw file</i>. Select the file format <b>MEG/EEG: Ricoh...</b> and then select the folder containing the <b>.mrk</b> and <b>.con</b> files.
 8. The following warning will appear:
    <img width="747" alt="image" src="https://github.com/margarita-sison/MEGpipelines/assets/130074310/71a0ab63-702a-41c2-9f2e-ba34d80fb3f7">
-   ```KIT> Warning: The dataset has not been co-registered with the MRI with the RICOH software...
-BST> Not enough digitized head points to perform automatic registration.```
+   ```
+   KIT> Warning: The dataset has not been co-registered with the MRI with the RICOH software...
+   BST> Not enough digitized head points to perform automatic registration.
+   ```
+9. Click OK anyway. The following image will appear:
+    <img width="701" alt="image" src="https://github.com/margarita-sison/MEGpipelines/assets/130074310/2058b327-cea4-4d43-8949-435635615602">
 
