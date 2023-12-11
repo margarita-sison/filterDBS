@@ -224,6 +224,9 @@ function [bp, channels] = demount(channels, flag, type)
             bp=and(strcmp(channels, 'MEG MAG'), flag);
         case 'megplanar'
             bp=and(strcmp(channels, 'MEG GRAD'), flag);
+        otherwise
+            bp=and(contains(channels, 'MEG'), flag); % processes both 'MEG' (MIT KIT system gradiometers) and 'MEG REF' (KIT magnetometers) channel types
+            %bp=and(strcmp(channels, 'MEG'), flag); % processes only the 'MEG' (MIT KIT system gradiometers) channel type
     end
     
 end
