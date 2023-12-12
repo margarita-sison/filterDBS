@@ -1,1 +1,1 @@
-# Filtering deep brain stimulation artifacts from Yokogawa (Ricoh) MEG data
+# Filtering deep brain stimulation artifacts from MEG data recorded with the Yokogawa (Ricoh) system
