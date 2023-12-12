@@ -45,5 +45,23 @@ If you want to process both gradiometers and magnetometers, add the following ``
 These modifications are implemented here: https://github.com/margarita-sison/filterDBS/commit/6ad9d3c610db28b42dceb0ec581b3f5e9edba7ed
 
 ## 📏 Parameters
-<img width="390" alt="image" src="https://github.com/margarita-sison/filterDBS/assets/130074310/d524f374-7707-4ca2-a2f9-20b599913d31">
+Please read section 2.3.1. of the [article](https://doi.org/10.1016/j.neuroimage.2020.117057) by Kandemir et al. (2020) to learn more about how the Hampel filter works. Section 4.1. lays out recommendations for optimal parameter selection. The important points from both sections are included below.
+
+1. Window Length (Hz)
+    - First, the frequency spectrum of sensor-space data is computed using the fast Fourier transform (FFT). In the frequency domain, narrow fewquency peaks induced by DBS are considered outliers. The Hampel operates on a sliding window, identifying outliers in both the real and imaginary part of the frequency spectrum within a given window. After the frequency spectrum is filtered, it is transformed back into the time domain using the inverse FFT.
+    - DBS-induced peaks are typically 0.2 Hz in width. To effectively filter these artifacts, a sliding window length of at least twice their width is recommended. Note that the computational complexity scales with the length of the window.
+    - In the study performed by Kandemir et al. (2020), window lengths of 0.5, 6 and 10 Hz were tested. 6 and 10 Hz windows yielded better results than the 0.5 Hz window, but the results did not differ between the 6 and 10 Hz window. Therefore, a 6 Hz window was used for further analyses.
+    - Options: 0.25, 0.50, 0.75, 1, 2, 3, 4, 5
+3. Constant
+    - This is referred to as the <i>threshold parameter C</i>. If a value is <i>C</i> standard deviations above the median of the frequency spectrum within a given window, then it is considered an outlier. The higher <i>C</i> is, the less sensitive the Hampel filter is to outliers. Accordingly, by adjusting this parameter, we can adjust the sensitivity of the Hampel filter to DBS-induced peaks.
+    - 
+    - Options: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+4. Frequencies to Reject
+    - Default: All
+5. Lowpass Frequency
+    - Default: 100.00 Hz
+
+<img width="390" alt="image" src="https://github.com/margarita-sison/filterDBS/assets/130074310/d524f374-7707-4ca2-a2f9-20b599913d31"> 
+
+
 
