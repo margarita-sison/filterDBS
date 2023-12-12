@@ -54,13 +54,14 @@ Please read section 2.3.1. of the [article](https://doi.org/10.1016/j.neuroimage
     - Options: 0.25, 0.50, 0.75, 1, 2, 3, 4, 5
 3. Constant
     - This is referred to as the <i>threshold parameter C</i>. If a value is <i>C</i> standard deviations above the median of the frequency spectrum within a given window, then it is considered an outlier. The higher <i>C</i> is, the less sensitive the Hampel filter is to outliers. Accordingly, by adjusting this parameter, we can adjust the sensitivity of the Hampel filter to DBS-induced peaks.
-    - 
+    - <i>C</i> = 1 is not recommended because it 
     - Options: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 4. Frequencies to Reject
     - Default: All
 5. Lowpass Frequency
     - Default: 100.00 Hz
 
+In general, it is advisable to decide on the optimal parameters by performing a visual inspection of the filtered frequency spectrum.
 <img width="390" alt="image" src="https://github.com/margarita-sison/filterDBS/assets/130074310/d524f374-7707-4ca2-a2f9-20b599913d31"> 
 
 
