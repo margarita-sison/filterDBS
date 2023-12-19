@@ -67,4 +67,12 @@ In general, it is advisable to decide on the optimal parameters by performing a 
 <img width="390" alt="image" src="https://github.com/margarita-sison/filterDBS/assets/130074310/d524f374-7707-4ca2-a2f9-20b599913d31"> 
 
 ## 📈 Demo
+Shown here are spectra of the 'MEG' and 'MEG REF' channels. The upper figure shows the channel spectra before a Hampel filter was applied to the MEG recording. \
+\
+A Hampel filter was applied to both the 'MEG' and 'MEG REF' channels with the following parameter specifications:
+- Window Length (Hz) = 0.5
+- Constant = 2
+- Frequencies to Reject = All
+- Lowpass Frequency = 250.00 Hz
+<img width="960" alt="image" src="https://github.com/margarita-sison/filterDBSartifacts/assets/130074310/e1810eb3-145a-44c9-b2c2-9537e3d9eb05">
 
