@@ -1,4 +1,4 @@
-# Documentation for arriving at MRI registration
+# Documentation for computing the head model (lead field matrix)
 ## 📂 ber009_stimoff files
 📄 <b>.mrk</b> - contains Head Position Indicator coils in MEG device coordinates\
 📄 <b>.con</b> - contains Yokogawa/KIT data\
